@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-recommender
+  labels:
+    app: movie-recommender
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-recommender
+  template:
+    metadata:
+      labels:
+        app: movie-recommender
+    spec:
+      containers:
+      - name: movie-recommender
+        image: pranit007/movie-recommender
+        ports:
+        - containerPort: 8501
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
