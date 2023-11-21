@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: movie-recommender
-  labels:
+  labels:                          #This label is not necessary in this deployment file.
     app: movie-recommender
 spec:
   replicas: 1
