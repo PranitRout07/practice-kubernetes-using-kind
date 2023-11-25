@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: movie-recommender
   labels:                       #This label has no such high value till now in the deployment.
+  labels:                          #This label is not necessary in this deployment file.
     app: movie-recommender
 spec:
   replicas: 1
